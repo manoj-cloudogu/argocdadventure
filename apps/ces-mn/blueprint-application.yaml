@@ -15,6 +15,9 @@ spec:
     chart: k8s-blueprint
     targetRevision: "1.2.1"
     path: "."  # required for Helm OCI sources
+    helm:
+      valueFiles:
+        - $values/values/blueprint/values.yaml
     # You can override the default configuration here.
     # See https://github.com/cloudogu/k8s-blueprint-helm/blob/develop/k8s/helm/values.yaml for all available options.
 #    helm:

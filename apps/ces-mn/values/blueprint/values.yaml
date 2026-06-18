@@ -1,0 +1,54 @@
+metadata:
+  name:  k8s-blueprint-helm-custom
+  labels:
+    app.kubernetes.io/name: blueprint
+spec:
+  displayName: "Blueprint (core)"
+  blueprint:
+    config:
+      global:
+        fqdn:
+          value: "34.159.91.39"
+    dogus:
+      official/cas:
+        version: "7.2.7-5"
+      official/jenkins:
+        version: "2.528.1-2"
+        absent: true
+      official/cockpit:
+        version: "2.3.0-5"
+      official/ldap:
+        version: "2.6.8-4"
+      official/mysql:
+        version: "8.4.6-1"
+      official/plantuml:
+        version: "2025.8-1"
+      official/postfix:
+        version: "3.10.4-1"
+      official/postgresql:
+        version: "14.18-3"
+      official/redis:
+        version: "6.2.21-1"
+      official/scm:
+        version: "3.11.1-2"
+        absent: true
+      official/smeagol:
+        version: "1.7.8-2"
+        absent: true
+      official/sonar:
+        version: "25.7.0-1"
+        absent: true
+      official/swaggerui:
+        version: "5.29.5-1"
+        absent: true
+      official/usermgt:
+        version: "1.20.0-5"
+      premium/admin:
+        version: "2.18.0-1"
+      premium/grafana:
+        version: "11.5.2-2"
+        absent: true
+      premium/portainer:
+        version: "2.27.9-2"
+        absent: true
+  blueprintMask: null
