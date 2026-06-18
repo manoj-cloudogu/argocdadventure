@@ -15,24 +15,6 @@ spec:
       chart: k8s-blueprint
       targetRevision: "1.2.1"
       path: "."  # required for Helm OCI sources
-      helm:
-        valueFiles:
-          - $values/values/blueprint/values.yaml
-    - repoURL: https://github.com/manoj-cloudogu/argocdadventure
-      targetRevision: "main"
-      ref: values
-
-    # You can override the default configuration here.
-    # See https://github.com/cloudogu/k8s-blueprint-helm/blob/develop/k8s/helm/values.yaml for all available options.
-#    helm:
-#      valuesObject:
-#        spec:
-#          blueprint:
-#            dogus:
-#              official/cas:
-#                version: "7.2.7-5"
-#              official/swaggerui:
-#                version: "5.29.5-1"
   destination:
     server: https://kubernetes.default.svc
     namespace: ecosystem
